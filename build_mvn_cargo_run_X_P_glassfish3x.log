@@ -1,0 +1,417 @@
+Apache Maven 3.0.4 (r1232337; 2012-01-17 16:44:56+0800)
+Maven home: C:\app\apache-maven-3.0.4
+Java version: 1.7.0_04, vendor: Oracle Corporation
+Java home: C:\app\java\jdk1.7.0_04\jre
+Default locale: en_PH, platform encoding: Cp1252
+OS name: "windows 7", version: "6.1", arch: "amd64", family: "windows"
+[INFO] Error stacktraces are turned on.
+[DEBUG] Reading global settings from C:\app\apache-maven-3.0.4\conf\settings.xml
+[DEBUG] Reading user settings from C:\Users\Allan.See\.m2\settings.xml
+[DEBUG] Using local repository at C:\Users\Allan.See\.m2\repository
+[DEBUG] Using manager EnhancedLocalRepositoryManager with priority 10 for C:\Users\Allan.See\.m2\repository
+[INFO] Scanning for projects...
+[DEBUG] Extension realms for project sample.cargo:glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows:war:1.0-SNAPSHOT: (none)
+[DEBUG] Looking up lifecyle mappings for packaging war from ClassRealm[plexus.core, parent: null]
+[DEBUG] Resolving plugin prefix cargo from [org.apache.maven.plugins, org.codehaus.mojo]
+[DEBUG] Resolved plugin prefix cargo to org.codehaus.cargo:cargo-maven2-plugin from POM sample.cargo:glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows:war:1.0-SNAPSHOT
+[DEBUG] === REACTOR BUILD PLAN ================================================
+[DEBUG] Project: sample.cargo:glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows:war:1.0-SNAPSHOT
+[DEBUG] Tasks:   [cargo:run]
+[DEBUG] Style:   Regular
+[DEBUG] =======================================================================
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Maven Webapp 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[DEBUG] Resolving plugin prefix cargo from [org.apache.maven.plugins, org.codehaus.mojo]
+[DEBUG] Resolved plugin prefix cargo to org.codehaus.cargo:cargo-maven2-plugin from POM sample.cargo:glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows:war:1.0-SNAPSHOT
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] === PROJECT BUILD PLAN ================================================
+[DEBUG] Project:       sample.cargo:glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows:1.0-SNAPSHOT
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): [test]
+[DEBUG] Repositories (dependencies): [central (http://repo.maven.apache.org/maven2, releases)]
+[DEBUG] Repositories (plugins)     : [central (http://repo.maven.apache.org/maven2, releases)]
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.codehaus.cargo:cargo-maven2-plugin:1.2.2:run (default-cli)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <configuration>
+    <deployables>
+      <deployable>
+        <groupId>sample.cargo</groupId>
+        <artifactId>glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows</artifactId>
+        <type>war</type>
+        <properties>
+          <context>/test</context>
+        </properties>
+      </deployable>
+    </deployables>
+    <properties>
+      <cargo.servlet.port>8080</cargo.servlet.port>
+    </properties>
+  </configuration>
+  <container>
+    <containerId>glassfish3x</containerId>
+    <zipUrlInstaller>
+      <url>http://download.java.net/glassfish/3.1.2/release/glassfish-3.1.2.zip</url>
+      <downloadDir>C:\Users\Allan.See/.m2/downloads</downloadDir>
+    </zipUrlInstaller>
+  </container>
+  <containerId>${cargo.maven.containerId}</containerId>
+  <containerUrl>${cargo.maven.containerUrl}</containerUrl>
+  <localRepository>${localRepository}</localRepository>
+  <project>${project}</project>
+  <repositories>${project.remoteArtifactRepositories}</repositories>
+  <settings>${settings}</settings>
+  <skip default-value="false">${cargo.maven.skip}</skip>
+</configuration>
+[DEBUG] =======================================================================
+[DEBUG] sample.cargo:glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows:war:1.0-SNAPSHOT
+[DEBUG]    junit:junit:jar:3.8.1:test
+[INFO] 
+[INFO] --- cargo-maven2-plugin:1.2.2:run (default-cli) @ glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows ---
+[DEBUG] Created new class realm maven.api
+[DEBUG] Importing foreign packages into class realm maven.api
+[DEBUG]   Imported: org.apache.maven.wagon.events < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.transfer < plexus.core
+[DEBUG]   Imported: org.apache.maven.exception < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.metadata < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.Xpp3Dom < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.collection < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.version < plexus.core
+[DEBUG]   Imported: org.apache.maven.monitor < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.resource < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.logging < plexus.core
+[DEBUG]   Imported: org.apache.maven.profiles < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.classrealm < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.artifact < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.spi < plexus.core
+[DEBUG]   Imported: org.apache.maven.reporting < plexus.core
+[DEBUG]   Imported: org.apache.maven.usability < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.container < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.component < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlSerializer < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authentication < plexus.core
+[DEBUG]   Imported: org.apache.maven.lifecycle < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.classworlds < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.graph < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.settings < plexus.core
+[DEBUG]   Imported: org.codehaus.classworlds < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.impl < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.toolchain < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.deployment < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.observers < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParserException < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParser < plexus.core
+[DEBUG]   Imported: org.apache.maven.configuration < plexus.core
+[DEBUG]   Imported: org.apache.maven.cli < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.installation < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.context < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authorization < plexus.core
+[DEBUG]   Imported: org.apache.maven.project < plexus.core
+[DEBUG]   Imported: org.apache.maven.rtinfo < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.lifecycle < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.configuration < plexus.core
+[DEBUG]   Imported: org.apache.maven.artifact < plexus.core
+[DEBUG]   Imported: org.apache.maven.model < plexus.core
+[DEBUG]   Imported: org.apache.maven.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.proxy < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.resolution < plexus.core
+[DEBUG]   Imported: org.apache.maven.plugin < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.* < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.personality < plexus.core
+[DEBUG] Populating class realm maven.api
+[DEBUG] org.codehaus.cargo:cargo-maven2-plugin:jar:1.2.2:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0:compile
+[DEBUG]    org.apache.maven:maven-project:jar:2.0:compile
+[DEBUG]       org.apache.maven:maven-profile:jar:2.0:compile
+[DEBUG]       org.apache.maven:maven-model:jar:2.0:compile
+[DEBUG]       org.apache.maven:maven-artifact-manager:jar:2.0:compile
+[DEBUG]          org.apache.maven:maven-repository-metadata:jar:2.0:compile
+[DEBUG]       org.apache.maven:maven-artifact:jar:2.0:compile
+[DEBUG]       org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8:compile
+[DEBUG]          junit:junit:jar:3.8.1:compile
+[DEBUG]          classworlds:classworlds:jar:1.1-alpha-2:compile
+[DEBUG]    org.apache.maven:maven-settings:jar:2.0:compile
+[DEBUG]    org.apache.maven:maven-archiver:jar:2.4.1:compile
+[DEBUG]       org.codehaus.plexus:plexus-archiver:jar:1.0:compile
+[DEBUG]          org.codehaus.plexus:plexus-io:jar:1.0:compile
+[DEBUG]       org.codehaus.plexus:plexus-interpolation:jar:1.13:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:1.4.7:compile
+[DEBUG]    org.codehaus.cargo:cargo-core-api-generic:jar:1.2.2:compile
+[DEBUG]       commons-discovery:commons-discovery:jar:0.4:compile
+[DEBUG]          commons-logging:commons-logging:jar:1.0.4:compile
+[DEBUG]       org.codehaus.cargo:cargo-core-api-container:jar:1.2.2:compile
+[DEBUG]          org.codehaus.cargo:cargo-core-api-module:jar:1.2.2:compile
+[DEBUG]             jdom:jdom:jar:1.0:compile
+[DEBUG]             org.codehaus.cargo:cargo-core-api-util:jar:1.2.2:compile
+[DEBUG]                dom4j:dom4j:jar:1.4:compile
+[DEBUG]                   xml-apis:xml-apis:jar:1.0.b2:compile
+[DEBUG]                   jaxen:jaxen:jar:1.0-FCS:compile
+[DEBUG]                   saxpath:saxpath:jar:1.0-FCS:compile
+[DEBUG]                   msv:msv:jar:20020414:compile
+[DEBUG]                   relaxngDatatype:relaxngDatatype:jar:20020414:compile
+[DEBUG]                   isorelax:isorelax:jar:20020414:compile
+[DEBUG]                org.apache.ant:ant:jar:1.7.1:compile
+[DEBUG]                   org.apache.ant:ant-launcher:jar:1.7.1:compile
+[DEBUG]          org.apache.geronimo.specs:geronimo-j2ee-deployment_1.1_spec:jar:1.1:compile
+[DEBUG] Created new class realm plugin>org.codehaus.cargo:cargo-maven2-plugin:1.2.2
+[DEBUG] Importing foreign packages into class realm plugin>org.codehaus.cargo:cargo-maven2-plugin:1.2.2
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.codehaus.cargo:cargo-maven2-plugin:1.2.2
+[DEBUG]   Included: org.codehaus.cargo:cargo-maven2-plugin:jar:1.2.2
+[DEBUG]   Included: junit:junit:jar:3.8.1
+[DEBUG]   Included: org.apache.maven:maven-archiver:jar:2.4.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-archiver:jar:1.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-io:jar:1.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.13
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:1.4.7
+[DEBUG]   Included: org.codehaus.cargo:cargo-core-api-generic:jar:1.2.2
+[DEBUG]   Included: commons-discovery:commons-discovery:jar:0.4
+[DEBUG]   Included: commons-logging:commons-logging:jar:1.0.4
+[DEBUG]   Included: org.codehaus.cargo:cargo-core-api-container:jar:1.2.2
+[DEBUG]   Included: org.codehaus.cargo:cargo-core-api-module:jar:1.2.2
+[DEBUG]   Included: jdom:jdom:jar:1.0
+[DEBUG]   Included: org.codehaus.cargo:cargo-core-api-util:jar:1.2.2
+[DEBUG]   Included: dom4j:dom4j:jar:1.4
+[DEBUG]   Included: xml-apis:xml-apis:jar:1.0.b2
+[DEBUG]   Included: jaxen:jaxen:jar:1.0-FCS
+[DEBUG]   Included: saxpath:saxpath:jar:1.0-FCS
+[DEBUG]   Included: msv:msv:jar:20020414
+[DEBUG]   Included: relaxngDatatype:relaxngDatatype:jar:20020414
+[DEBUG]   Included: isorelax:isorelax:jar:20020414
+[DEBUG]   Included: org.apache.ant:ant:jar:1.7.1
+[DEBUG]   Included: org.apache.ant:ant-launcher:jar:1.7.1
+[DEBUG]   Included: org.apache.geronimo.specs:geronimo-j2ee-deployment_1.1_spec:jar:1.1
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:2.0
+[DEBUG]   Excluded: org.apache.maven:maven-project:jar:2.0
+[DEBUG]   Excluded: org.apache.maven:maven-profile:jar:2.0
+[DEBUG]   Excluded: org.apache.maven:maven-model:jar:2.0
+[DEBUG]   Excluded: org.apache.maven:maven-artifact-manager:jar:2.0
+[DEBUG]   Excluded: org.apache.maven:maven-repository-metadata:jar:2.0
+[DEBUG]   Excluded: org.apache.maven:maven-artifact:jar:2.0
+[DEBUG]   Excluded: org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   Excluded: classworlds:classworlds:jar:1.1-alpha-2
+[DEBUG]   Excluded: org.apache.maven:maven-settings:jar:2.0
+[DEBUG] Configuring mojo org.codehaus.cargo:cargo-maven2-plugin:1.2.2:run from plugin realm ClassRealm[plugin>org.codehaus.cargo:cargo-maven2-plugin:1.2.2, parent: sun.misc.Launcher$AppClassLoader@45a8a7e]
+[DEBUG] Configuring mojo 'org.codehaus.cargo:cargo-maven2-plugin:1.2.2:run' with basic configurator -->
+[DEBUG]   (s) groupId = sample.cargo
+[DEBUG]   (s) artifactId = glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows
+[DEBUG]   (s) type = war
+[DEBUG]   (s) properties = {context=/test}
+[DEBUG]   (s) deployables = [AbstractDependency{ groupId=sample.cargo, artifactId=glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows, type=war, classifier=null }]
+[DEBUG]   (s) properties = {cargo.servlet.port=8080}
+[DEBUG]   (f) configuration = org.codehaus.cargo.maven2.configuration.Configuration@3f22b3ca
+[DEBUG]   (s) containerId = glassfish3x
+[DEBUG]   (s) url = http://download.java.net/glassfish/3.1.2/release/glassfish-3.1.2.zip
+[DEBUG]   (s) downloadDir = C:\Users\Allan.See/.m2/downloads
+[DEBUG]   (s) zipUrlInstaller = org.codehaus.cargo.maven2.configuration.ZipUrlInstaller@397fe9c
+[DEBUG]   (f) container = org.codehaus.cargo.maven2.configuration.Container@6fccb59b
+[DEBUG]   (f) localRepository =        id: local
+      url: file:///C:/Users/Allan.See/.m2/repository/
+   layout: none
+
+[DEBUG]   (f) project = MavenProject: sample.cargo:glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows:1.0-SNAPSHOT @ C:\src\glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows\pom.xml
+[DEBUG]   (f) repositories = [       id: central
+      url: http://repo.maven.apache.org/maven2
+   layout: default
+snapshots: [enabled => false, update => daily]
+ releases: [enabled => true, update => daily]
+]
+[DEBUG]   (f) settings = org.apache.maven.execution.SettingsAdapter@4e2df5c6
+[DEBUG]   (f) skip = false
+[DEBUG] -- end configuration --
+[DEBUG] dummy:dummy:pom:0.1 (selected for null)
+[DEBUG]   org.codehaus.cargo:cargo-core-container-glassfish:jar:1.2.2 (selected for null)
+[DEBUG]     org.codehaus.cargo:cargo-core-api-generic:jar:1.2.2:compile (selected for compile)
+[DEBUG]       commons-discovery:commons-discovery:jar:0.4:compile (selected for compile)
+[DEBUG]         commons-logging:commons-logging:jar:1.0.4:compile (selected for compile)
+[DEBUG]       org.codehaus.cargo:cargo-core-api-container:jar:1.2.2:compile (selected for compile)
+[DEBUG]         org.codehaus.cargo:cargo-core-api-module:jar:1.2.2:compile (selected for compile)
+[DEBUG]           jdom:jdom:jar:1.0:compile (selected for compile)
+[DEBUG]           org.codehaus.cargo:cargo-core-api-util:jar:1.2.2:compile (selected for compile)
+[DEBUG]             dom4j:dom4j:jar:1.4:compile (selected for compile)
+[DEBUG]               xml-apis:xml-apis:jar:1.0.b2:compile (selected for compile)
+[DEBUG]               jaxen:jaxen:jar:1.0-FCS:compile (selected for compile)
+[DEBUG]               saxpath:saxpath:jar:1.0-FCS:compile (selected for compile)
+[DEBUG]               msv:msv:jar:20020414:compile (selected for compile)
+[DEBUG]               relaxngDatatype:relaxngDatatype:jar:20020414:compile (selected for compile)
+[DEBUG]               isorelax:isorelax:jar:20020414:compile (selected for compile)
+[DEBUG]             org.apache.ant:ant:jar:1.7.1:compile (selected for compile)
+[DEBUG]               org.apache.ant:ant-launcher:jar:1.7.1:compile (selected for compile)
+[DEBUG]         org.apache.geronimo.specs:geronimo-j2ee-deployment_1.1_spec:jar:1.1:compile (selected for compile)
+[DEBUG]     xmlunit:xmlunit:jar:1.2:test (selected for test)
+[DEBUG]     org.codehaus.cargo:cargo-core-api-container:jar:1.2.2:compile (selected for compile)
+[DEBUG]       org.codehaus.cargo:cargo-core-api-module:jar:1.2.2:compile (selected for compile)
+[DEBUG]         jdom:jdom:jar:1.0:compile (selected for compile)
+[DEBUG]         org.codehaus.cargo:cargo-core-api-util:jar:1.2.2:compile (selected for compile)
+[DEBUG]           dom4j:dom4j:jar:1.4:compile (selected for compile)
+[DEBUG]             xml-apis:xml-apis:jar:1.0.b2:compile (selected for compile)
+[DEBUG]             jaxen:jaxen:jar:1.0-FCS:compile (selected for compile)
+[DEBUG]             saxpath:saxpath:jar:1.0-FCS:compile (selected for compile)
+[DEBUG]             msv:msv:jar:20020414:compile (selected for compile)
+[DEBUG]             relaxngDatatype:relaxngDatatype:jar:20020414:compile (selected for compile)
+[DEBUG]             isorelax:isorelax:jar:20020414:compile (selected for compile)
+[DEBUG]           org.apache.ant:ant:jar:1.7.1:compile (selected for compile)
+[DEBUG]             org.apache.ant:ant-launcher:jar:1.7.1:compile (selected for compile)
+[DEBUG]       org.apache.geronimo.specs:geronimo-j2ee-deployment_1.1_spec:jar:1.1:compile (selected for compile)
+[DEBUG]     org.codehaus.cargo:cargo-core-api-container:test-jar:tests:1.2.2:test (selected for test)
+[DEBUG]     org.codehaus.cargo:cargo-core-api-util:test-jar:tests:1.2.2:test (selected for test)
+[DEBUG]       dom4j:dom4j:jar:1.4:test (setting artifactScope to: compile)
+[DEBUG]       org.apache.ant:ant:jar:1.7.1:test (setting artifactScope to: compile)
+[DEBUG]     junit:junit:jar:3.8.1:test (selected for test)
+[DEBUG]     jmock:jmock:jar:1.2.0:test (selected for test)
+[DEBUG]     jmock:jmock-cglib:jar:1.2.0:test (selected for test)
+[DEBUG]       cglib:cglib-nodep:jar:2.1_3:test (selected for test)
+[DEBUG]     commons-vfs:commons-vfs:jar:1.0:test (selected for test)
+[DEBUG]       commons-logging:commons-logging:jar:1.0.4:test (setting artifactScope to: compile)
+[DEBUG] [en2.ContainerRunMojo] Resolved artifact and dependencies: [file:/C:/Users/Allan.See/.m2/repository/org/codehaus/cargo/cargo-core-container-glassfish/1.2.2/cargo-core-container-glassfish-1.2.2.jar]
+[INFO] [en2.ContainerRunMojo] Resolved container artifact org.codehaus.cargo:cargo-core-container-glassfish:jar:1.2.2 for container glassfish3x
+[DEBUG] Scheduling deployable for deployment: [groupId [sample.cargo], artifactId [glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows], type [war], location [null], pingURL [null]]
+[DEBUG] Initial deployable values: groupId = [sample.cargo], artifactId = [glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows], type = [war], location = [null]
+[DEBUG] Searching for an artifact that matches [sample.cargo:glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows:war:null]...
+[DEBUG] Checking artifact [sample.cargo:glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows:war:null]...
+[DEBUG] Computed deployable values: groupId = [sample.cargo], artifactId = [glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows], classifier = [null], type = [war], location = [C:\src\glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows\target\glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows-1.0-SNAPSHOT.war]
+[DEBUG] Setting deployable property [context]:[/test] for [C:\src\glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows\target\glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows-1.0-SNAPSHOT.war]
+[DEBUG] Invoking setter method public synchronized void org.codehaus.cargo.container.deployable.WAR.setContext(java.lang.String) for deployable org.codehaus.cargo.container.deployable.WAR[glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows-1.0-SNAPSHOT.war] with argument /test
+[DEBUG] No container log will be generated. Configure the plugin using the <output> element under <container> to generate container logs
+[DEBUG] [neLocalConfiguration] Searching properties for Resource definitions
+[DEBUG] [neLocalConfiguration] Searching properties for DataSource definitions
+[DEBUG] [talledLocalContainer] Jvm Spawn flag [false]
+[DEBUG] [talledLocalContainer] Execute:Java13CommandLauncher: Executing 'C:\app\java\jdk1.7.0_04\jre\bin\java.exe' with arguments:
+'-jar'
+'C:\src\glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows\target\cargo\installs\glassfish-3.1.2\glassfish3\glassfish\modules\admin-cli.jar'
+'--interactive=false'
+'--user'
+'admin'
+'--passwordfile'
+'C:\src\glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows\target\cargo\configurations\glassfish3x\password.properties'
+'create-domain'
+'--adminport'
+'4848'
+'--instanceport'
+'8080'
+'--domainproperties'
+'jms.port=7676:orb.listener.port=3700:orb.ssl.port=3820:http.ssl.port=8181:orb.mutualauth.port=3920:domain.jmxPort=8686:java.debugger.port=9009:osgi.shell.telnet.port=6666'
+'--domaindir'
+'C:\src\glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows\target\cargo\configurations\glassfish3x'
+'cargo-domain'
+
+The ' characters around the executable and arguments are
+not part of the command.
+[INFO] [talledLocalContainer] Using port 4848 for Admin.
+[INFO] [talledLocalContainer] Using port 8080 for HTTP Instance.
+[INFO] [talledLocalContainer] Using port 7676 for JMS.
+[INFO] [talledLocalContainer] Using port 3700 for IIOP.
+[INFO] [talledLocalContainer] Using port 8181 for HTTP_SSL.
+[INFO] [talledLocalContainer] Using port 3820 for IIOP_SSL.
+[INFO] [talledLocalContainer] Using port 3920 for IIOP_MUTUALAUTH.
+[INFO] [talledLocalContainer] Using port 8686 for JMX_ADMIN.
+[INFO] [talledLocalContainer] Using port 6666 for OSGI_SHELL.
+[INFO] [talledLocalContainer] Using port 9009 for JAVA_DEBUGGER.
+[INFO] [talledLocalContainer] Distinguished Name of the self-signed X.509 Server Certificate is:
+[INFO] [talledLocalContainer] [CN=MY-COMPUTER-NAME.MY.COMPANY.CORP,OU=GlassFish,O=Oracle Corporation,L=Santa Clara,ST=California,C=US]
+[INFO] [talledLocalContainer] Distinguished Name of the self-signed X.509 Server Certificate is:
+[INFO] [talledLocalContainer] [CN=MY-COMPUTER-NAME.MY.COMPANY.CORP-instance,OU=GlassFish,O=Oracle Corporation,L=Santa Clara,ST=California,C=US]
+[INFO] [talledLocalContainer] No domain initializers found, bypassing customization step
+[INFO] [talledLocalContainer] Domain cargo-domain created.
+[INFO] [talledLocalContainer] Domain cargo-domain admin port is 4848.
+[INFO] [talledLocalContainer] Domain cargo-domain admin user is "admin".
+[INFO] [talledLocalContainer] Command create-domain executed successfully.
+[INFO] [talledLocalContainer] GlassFish 3.x starting...
+[DEBUG] [talledLocalContainer]    +Task: java
+[DEBUG] [talledLocalContainer] Jvm Spawn flag [false]
+[DEBUG] [talledLocalContainer] Starting domain on HTTP port 8080 and admin port 4848
+[DEBUG] [talledLocalContainer] Executing 'C:\app\java\jdk1.7.0_04\jre\bin\java.exe' with arguments:
+'-Xms128m'
+'-Xmx512m'
+'-XX:PermSize=48m'
+'-XX:MaxPermSize=128m'
+'-jar'
+'C:\src\glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows\target\cargo\installs\glassfish-3.1.2\glassfish3\glassfish\modules\admin-cli.jar'
+'start-domain'
+'--interactive=false'
+'--domaindir'
+'C:\src\glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows\target\cargo\configurations\glassfish3x'
+'--debug=false'
+'cargo-domain'
+
+The ' characters around the executable and arguments are
+not part of the command.
+[DEBUG] [talledLocalContainer] Execute:Java13CommandLauncher: Executing 'C:\app\java\jdk1.7.0_04\jre\bin\java.exe' with arguments:
+'-Xms128m'
+'-Xmx512m'
+'-XX:PermSize=48m'
+'-XX:MaxPermSize=128m'
+'-jar'
+'C:\src\glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows\target\cargo\installs\glassfish-3.1.2\glassfish3\glassfish\modules\admin-cli.jar'
+'start-domain'
+'--interactive=false'
+'--domaindir'
+'C:\src\glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows\target\cargo\configurations\glassfish3x'
+'--debug=false'
+'cargo-domain'
+
+The ' characters around the executable and arguments are
+not part of the command.
+[INFO] [talledLocalContainer] Attempting to start cargo-domain.... Please look at the server log for more details.....
+[DEBUG] [talledLocalContainer]    +Task: java
+[DEBUG] [talledLocalContainer] Jvm Spawn flag [false]
+[DEBUG] [talledLocalContainer] Execute:Java13CommandLauncher: Executing 'C:\app\java\jdk1.7.0_04\jre\bin\java.exe' with arguments:
+'-jar'
+'C:\src\glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows\target\cargo\installs\glassfish-3.1.2\glassfish3\glassfish\modules\admin-cli.jar'
+'--interactive=false'
+'--port'
+'4848'
+'--user'
+'admin'
+'--passwordfile'
+'C:\src\glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows\target\cargo\configurations\glassfish3x\password.properties'
+'deploy'
+'--force'
+'--contextroot'
+'test'
+'C:\src\glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows\target\glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows-1.0-SNAPSHOT.war'
+
+The ' characters around the executable and arguments are
+not part of the command.
+[INFO] [talledLocalContainer] Application deployed with name glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows-1.0-SNAPSHOT.
+[INFO] [talledLocalContainer] Command deploy executed successfully.
+[DEBUG] [talledLocalContainer]    +Task: java
+[DEBUG] [talledLocalContainer] Jvm Spawn flag [false]
+[DEBUG] [talledLocalContainer] Execute:Java13CommandLauncher: Executing 'C:\app\java\jdk1.7.0_04\jre\bin\java.exe' with arguments:
+'-jar'
+'C:\src\glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows\target\cargo\installs\glassfish-3.1.2\glassfish3\glassfish\modules\admin-cli.jar'
+'--interactive=false'
+'--port'
+'4848'
+'--user'
+'admin'
+'--passwordfile'
+'C:\src\glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows\target\cargo\configurations\glassfish3x\password.properties'
+'deploy'
+'--force'
+'--contextroot'
+'cargocpc'
+'C:\src\glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows\target\cargo\configurations\glassfish3x\cargocpc.war'
+
+The ' characters around the executable and arguments are
+not part of the command.
+[INFO] [talledLocalContainer] Application deployed with name cargocpc.
+[INFO] [talledLocalContainer] Command deploy executed successfully.
+[DEBUG] [URLDeployableMonitor] Checking URL [http://localhost:8080/cargocpc/index.html] for status using a timeout of [120000] ms...
+[DEBUG] [URLDeployableMonitor] URL [http://localhost:8080/cargocpc/index.html] is responding...
+[DEBUG] [URLDeployableMonitor] Notifying monitor listener [org.codehaus.cargo.container.spi.deployer.DeployerWatchdog@7112ac37]
+[INFO] [talledLocalContainer] GlassFish 3.x started on port [8080]
+[INFO] Press Ctrl-C to stop the container...
+Terminate batch job (Y/N)? 
