@@ -54,7 +54,7 @@
                   <artifactId>${project.artifactId}</artifactId>
                   <type>war</type>
                   <properties>
-                    <context>${project.artifactId}</context>
+                    <context>/test</context>
                   </properties>
                 </deployable>
               </deployables>
@@ -264,6 +264,7 @@
                   <containerId>glassfish3x</containerId>
                   <zipUrlInstaller>
                     <url>http://download.java.net/glassfish/3.1.2/release/glassfish-3.1.2.zip</url>
+                    <downloadDir>${user.home}/.m2/downloads</downloadDir>
                   </zipUrlInstaller>
                 </container>
               </configuration>
