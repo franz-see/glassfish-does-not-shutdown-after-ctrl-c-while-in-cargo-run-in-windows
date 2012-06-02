@@ -1,6 +1,8 @@
 How to recreate issue
 =============
 
+_Note: This project was created using org.codehaus.cargo:cargo-archetype-webapp-single-module:1.2.2 with some minor modifications._
+
 1. Checkout this code in a Windows 7 environment
 2. Create the war (mvn clean package; see sample log in https://raw.github.com/franz-see/glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows/master/build_mvn_cargo_run_X_P_glassfish3x.log)
 3. Run the war with glassfish profile (mvn cargo:run -X -Pglassfish3x; see sample log in https://raw.github.com/franz-see/glassfish-does-not-shutdown-after-ctrl-c-while-in-cargo-run-in-windows/master/build_mvn_cargo_run_X_P_glassfish3x.log)
